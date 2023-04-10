@@ -1,4 +1,30 @@
-﻿<Properties StartupConfiguration="{C0B060FA-0A53-4EFA-A5B7-310026C31228}|Default">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C0B060FA-0A53-4EFA-A5B7-310026C31228}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sugar.Parallel/ConcurrentRunner.cs">
+    <Files>
+      <File FileName="Sugar.Parallel/Program.cs" Line="17" Column="24" />
+      <File FileName="Sugar.Parallel/ConcurrentRunner.cs" Line="5" Column="1" />
+      <File FileName=".gitignore" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Sugar" expanded="True">
+            <Node name="Sugar.Parallel" expanded="True">
+              <Node name="ConcurrentRunner.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Sugar.Parallel FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Sugar.Parallel PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

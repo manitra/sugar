@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 
 namespace Sugar.Parallel;
 
-public class ConcurrentRunner : IDisposable
+public class ConcurrentRunner : IAsyncDisposable
 {
     private readonly SemaphoreSlim sem;
     private readonly ConcurrentQueue<Task> tasks;
@@ -26,11 +26,6 @@ public class ConcurrentRunner : IDisposable
         tasks.Clear();
     }
 
-    public void Dispose()
-    {
-        sem.Dispose();
-    }
-
     private async Task CallAsync(Func<Task> action, SemaphoreSlim sem)
     {
         try
@@ -41,5 +36,11 @@ public class ConcurrentRunner : IDisposable
         {
             sem.Release();
         }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await WhenAll();
+        sem.Dispose();
     }
 }

@@ -1,8 +1,8 @@
 ﻿using Sugar.Parallel;
 
-using var runner = new ConcurrentRunner(20);
+await using var runner = new ConcurrentRunner(4);
 
-for (int i = 0; i < 1000; i++)
+for (int i = 0; i < 100; i++)
 {
     Console.WriteLine($"Main {i}");
     var local = i;
