@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Concurrent;
 
 namespace Sugar.Parallel;
@@ -7,6 +8,8 @@ public class ConcurrentRunner : IAsyncDisposable
 {
     private readonly SemaphoreSlim sem;
     private readonly ConcurrentQueue<Task> tasks;
+
+    public IReadOnlyCollection<Task> Tasks => tasks;
 
     public ConcurrentRunner(int maxParallellism = 1)
     {
