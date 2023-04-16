@@ -17,10 +17,10 @@ public class ConcurrentRunner : IAsyncDisposable
         tasks = new ConcurrentQueue<Task>();
     }
 
-    public async Task Run(Func<Task> action)
+    public async Task Run(Func<Task> asyncAction)
     {
         await sem.WaitAsync();
-        tasks.Enqueue(CallAsync(action, sem));
+        tasks.Enqueue(CallAsync(asyncAction, sem));
     }
 
     public async Task WhenAll()
